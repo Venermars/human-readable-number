@@ -3,7 +3,7 @@ module.exports = function toReadable (number) {
     let result = '';
     
     /* zero */
-   if (stringNumber === '0') return 'zero'
+   if (stringNumber === '0') return 'zero';
 
     /* 999 - 100 (hundreds)*/
     if (stringNumber > 99) {
@@ -15,9 +15,9 @@ module.exports = function toReadable (number) {
             : stringNumber[0] === '4' ? result += 'four hundred '
             : stringNumber[0] === '3' ? result += 'three hundred '
             : stringNumber[0] === '2' ? result += 'two hundred '
-            : result += 'one hundred '
+            : result += 'one hundred ';
 
-        stringNumber = stringNumber.substring(1)
+        stringNumber = stringNumber.substring(1);
     }
 
     /* 19 - 10 */
@@ -32,7 +32,7 @@ module.exports = function toReadable (number) {
             : stringNumber === '12' ? result += 'twelve'
             : stringNumber === '11' ? result += 'eleven'
             : stringNumber === '10' ? result += 'ten'
-            : null
+            : null;
         return result;
     }
 
@@ -46,10 +46,10 @@ module.exports = function toReadable (number) {
             : stringNumber[0] === '4' ? result += 'forty '
             : stringNumber[0] === '3' ? result += 'thirty '
             : stringNumber[0] === '2' ? result += 'twenty '
-            : null
+            : null;
     }
 
-    stringNumber.length !== 1 ? stringNumber = stringNumber.substring(1) : null
+    stringNumber.length !== 1 ? stringNumber = stringNumber.substring(1) : null;
     
     /* 99 - 20 & 9 - 1 (units) */
     stringNumber === '9' ? result += 'nine'
@@ -61,6 +61,6 @@ module.exports = function toReadable (number) {
         : stringNumber === '3' ? result += 'three'
         : stringNumber === '2' ? result += 'two'
         : stringNumber === '1' ? result += 'one'
-        : null
+        : null;
     
-}
+};
