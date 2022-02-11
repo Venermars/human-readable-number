@@ -63,4 +63,7 @@ module.exports = function toReadable (number) {
         : stringNumber === '1' ? result += 'one'
         : null;
     
-};
+    result = result.trim();
+
+    return result;
+}
